@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eef2f5;
+}
+
+/* Product Cards Container */
+.product-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Product Card */
+.product-card {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.product-card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 1.4em;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.product-card p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #f8f8f8;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #f8f8f8;
+}
+
+.product-card .buy-now {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.product-card .buy-now:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Favorite Icon */
+.favorite {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+}
+
+.favorite-checkbox {
+    display: none;
+}
+
+.favorite span {
+    transition: color 0.3s;
+}
+
+.favorite-checkbox:checked + span {
+    color: gold; /* Filled star color */
+}
+
+/* Red and Blue Themes */
+.product-card.red {
+    background-color: #e74c3c;
+}
+
+.product-card.blue {
+    background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
